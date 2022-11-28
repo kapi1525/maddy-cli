@@ -1,0 +1,3 @@
+[submodule "subprojects/maddy"]
+	path = subprojects/maddy
+	url = https://github.com/kapigames/maddy

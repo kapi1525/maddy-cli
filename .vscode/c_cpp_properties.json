@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "debug",
+            "cppStandard": "c++17",
+            "cStandard": "c11",
+            "compileCommands": "${workspaceFolder}/bin/compile_commands.json"
+        },
+        {
+            "name": "debugoptimized",
+            "cppStandard": "c++17",
+            "cStandard": "c11",
+            "compileCommands": "${workspaceFolder}/bin/compile_commands.json"
+        },
+        {
+            "name": "release",
+            "cppStandard": "c++17",
+            "cStandard": "c11",
+            "compileCommands": "${workspaceFolder}/bin/compile_commands.json"
+        }
+    ],
+    "version": 4
+}

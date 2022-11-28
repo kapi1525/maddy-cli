@@ -1,0 +1,23 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build",
+			"type": "shell",
+			"windows": {
+				// TODO: Better windows version
+				"command": "cls && meson ${config:mesonbuild.buildFolder} --buildtype ${command:cpptools.activeConfigName} && meson compile -C ${config:mesonbuild.buildFolder}"
+			},
+			"command": [
+				"clear;",
+				"if [ ! -f \"${config:mesonbuild.buildFolder}/meson-info/meson-info.json\" ]; then",
+				// TODO: Figure out how to check current build type and reconfigure if needed.
+				"meson ${config:mesonbuild.buildFolder} --buildtype ${command:cpptools.activeConfigName};",
+				"fi;",
+				"meson compile -C ${config:mesonbuild.buildFolder}"
+			],
+			"problemMatcher": ["$meson-gcc"],
+			"group": "build",
+		}
+	]
+}
